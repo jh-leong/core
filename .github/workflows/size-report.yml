@@ -68,6 +68,7 @@ jobs:
       - name: Prepare report
         run: pnpm tsx scripts/size-report.ts > size-report.md
 
+      # test
       - name: Create Comment
         uses: thollander/actions-comment-pull-request@v2.5.0
         with:
