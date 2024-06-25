@@ -3,10 +3,10 @@ on:
   push:
     branches:
       - '**'
-  pull_request:
-    branches:
-      - main
-      - minor
+  # pull_request:
+  #   branches:
+  #     - main
+  #     - minor
 
 permissions:
   contents: read # to fetch code (actions/checkout)
