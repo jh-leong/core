@@ -451,7 +451,10 @@ export class VueElement
     }
 
     // defining getter/setters on prototype
-    for (const key of declaredPropKeys.map(camelize)) {
+    const keys = new Set(
+      declaredPropKeys.map(camelize).concat(declaredPropKeys.map(hyphenate)),
+    )
+    for (const key of keys) {
       Object.defineProperty(this, key, {
         get() {
           return this._getProp(key)
